@@ -21,6 +21,7 @@ informed decisions.
 ## Career Track Selected
 
 **Track:** Reverse Engineer
+
 **Why:** The career track I chose was Reverse Engineering because it combines my interests in coding and security, allowing me to develop both skill sets.
 The most difficult skill I expect to develop is identifying what information is relevant to an investigation, as learning to quickly distinguish important details
 will help me save time, understand malicious code, and recognize potential threats more effectively.
