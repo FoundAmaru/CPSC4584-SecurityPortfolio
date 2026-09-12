@@ -16,8 +16,7 @@ the event suggests unauthorized access and requires evidence collection.]
 
 ## Key Findings
 
-**Permission Finding:** [The permission string informed me that, despite having a text file extension, 
-the file has execution functions]
+**Permission Finding:** [The permission string informed me that, despite having a text file extension, the file has execution functions]
 **File Type Finding:** [The file command revealed the file was actually an ELF executable and not a text file]
 **Timestamp Finding:** [The file was modified outside of working hours with the change time matching this information]
 **Strings Finding:** [The string revealed witin the file was an external URL, hiddent tmp path, and a curl command for downloads]
@@ -29,14 +28,10 @@ the file has execution functions]
 | Command | Purpose |
 |---------|---------|
 | pwd && ls -la | [Used to determine where the file is and any potential other suspsicious files] |
-| file [filename] | [Used to verify whether the file was the text file it claimed to be which it was not.
-The file was an ELF executable] |
-| stat [filename] | [Used to provide time based metadata to determine when the file was changed. 
-Confirmed the change happened during the suspicious activity time] |
-| strings [filename] | [The readable strings within the file are revealed with this command showcasing that it was an external URL,
-had hidden tmp files, and a curl command] |
-| find . -mtime -1 -type f | [Time based search which narrowed down changes to files within the last day showcasing
-the tmp files which were modified.] |
+| file [filename] | [Used to verify whether the file was the text file it claimed to be which it was not. The file was an ELF executable] |
+| stat [filename] | [Used to provide time based metadata to determine when the file was changed. Confirmed the change happened during the suspicious activity time] |
+| strings [filename] | [The readable strings within the file are revealed with this command showcasing that it was an external URL,had hidden tmp files, and a curl command] |
+| find . -mtime -1 -type f | [Time based search which narrowed down changes to files within the last day showcasing the tmp files which were modified.] |
 
 ---
 
