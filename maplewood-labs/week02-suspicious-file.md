@@ -17,8 +17,11 @@ the event suggests unauthorized access and requires evidence collection.]
 ## Key Findings
 
 **Permission Finding:** [The permission string informed me that, despite having a text file extension, the file has execution functions]
+
 **File Type Finding:** [The file command revealed the file was actually an ELF executable and not a text file]
+
 **Timestamp Finding:** [The file was modified outside of working hours with the change time matching this information]
+
 **Strings Finding:** [The string revealed witin the file was an external URL, hiddent tmp path, and a curl command for downloads]
 
 ---
