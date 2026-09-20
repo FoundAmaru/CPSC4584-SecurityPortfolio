@@ -37,10 +37,10 @@ allowing IT to log the device and escalate it safely to the SOC.
 
 | Command | Purpose |
 |---------|---------|
-| echo "..." \| base64 | [Explain what you learned about Base64 representation.] |
-| echo "..." \| base64 -d | [Explain what decoding revealed.] |
-| xxd .bashrc \| head -6 | [Explain what the hex dump showed.] |
-| strings .bashrc \| grep -i "..." | [Explain how pattern filtering narrowed the output.] |
+| echo "unauthorized access" \| base64 | Encoding while difficult to read at first glance once the tells are found it is simple to decode. This is by design because encoding is not meant to give confidemtiality |
+| echo Y3VybCAtcyAtbyAvZGV2L251bGw= \| base64 -d | The decoded command uses curl -s -o /dev/null to send an outbound request while suppressing local output and logging to evade detection. |
+| xxd .bashrc \| head -6 | The hex dump structures data into 16 byte lines alongside corresponding ASCII text, where a broken pipe warning simply indicates head closed the stream after six lines. |
+| strings .bashrc \| grep -i "path\|export\|alias" | After strings stripped non-printable characters to preserve terminal readability, grep applied pattern matching to isolate specific keywords like alias, path, and export. |
 
 ---
 
