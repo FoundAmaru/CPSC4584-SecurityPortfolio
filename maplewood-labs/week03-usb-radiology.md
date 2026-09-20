@@ -37,10 +37,10 @@ allowing IT to log the device and escalate it safely to the SOC.
 
 | Command | Purpose |
 |---------|---------|
-| echo "unauthorized access" \| base64 | Encoding while difficult to read at first glance once the tells are found it is simple to decode. This is by design because encoding is not meant to give confidemtiality |
+| echo "unauthorized access" \| base64 | Encoding, while difficult to read at first glance, is simple to decode once the tells are found. This is by design, as encoding is not meant to provide confidentiality. |
 | echo Y3VybCAtcyAtbyAvZGV2L251bGw= \| base64 -d | The decoded command uses curl -s -o /dev/null to send an outbound request while suppressing local output and logging to evade detection. |
 | xxd .bashrc \| head -6 | The hex dump structures data into 16 byte lines alongside corresponding ASCII text, where a broken pipe warning simply indicates head closed the stream after six lines. |
-| strings .bashrc \| grep -i "path\|export\|alias" | After strings stripped unprintable characters to preserve terminal readability, grep applied pattern matching to isolate specific keywords like alias, path, and export. Important to note, the command has a backward slash after path and export which is unable to be shown in markdown view. |
+| strings .bashrc \| grep -i "path\|export\|alias" | After strings stripped unprintable characters to preserve terminal readability, grep applied pattern matching to isolate specific keywords like alias, path, and export. Important to note, the command has a backward slash after path and export which is unable to be shown in markdown view. See code view for the exact command. |
 
 ---
 
